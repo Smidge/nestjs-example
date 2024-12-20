@@ -1,0 +1,14 @@
+services:
+  # api:
+  #   build: .
+  #   ports:
+  #     - '3000:80'
+  db:
+    image: postgres:17.2-alpine3.21
+    restart: always
+    # set shared memory limit when using docker-compose
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: pswd1234
+    ports:
+      - '5432:5432'

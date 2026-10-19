@@ -10,5 +10,6 @@ services:
     shm_size: 128mb
     environment:
       POSTGRES_PASSWORD: pswd1234
+    # Localhost only: the password above is public in this repo.
     ports:
-      - '5432:5432'
+      - '127.0.0.1:5432:5432'

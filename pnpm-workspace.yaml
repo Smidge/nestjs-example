@@ -1,0 +1,8 @@
+# Skip releases younger than a day, as pnpm 11 and later do by default.
+minimumReleaseAge: 1440
+
+# Fastify 5.12.x fixes advisories that @nestjs/platform-fastify 11 still
+# pins below. mysql2 is pulled in by TypeORM but unused (this app uses pg).
+overrides:
+  fastify: ^5.12.7
+  mysql2: ^3.23.1
